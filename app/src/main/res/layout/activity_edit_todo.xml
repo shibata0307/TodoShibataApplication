@@ -1,24 +1,55 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:gravity="center">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/edit_action_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Todo編集" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/delete_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Todo削除" />
+        <EditText
+            android:id="@+id/edit_todo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="タイトル" />
 
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="戻る" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/edit_todo_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="詳細" />
+
+        <EditText
+            android:id="@+id/edit_todo_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="期日" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/holo_blue_light"/>
+
+            <Button
+                android:id="@+id/cansel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="キャンセル"
+                android:backgroundTint="@android:color/holo_red_light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

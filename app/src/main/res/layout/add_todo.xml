@@ -18,22 +18,53 @@
         android:inputType="textMultiLine"
         android:lines="4"/>
 
-    <EditText
-        android:id="@+id/todo_due_date"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="期限"/>
+        android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/save_todo_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TODOを保存" />
+        <EditText
+            android:id="@+id/todo_due_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="期限"
+            android:focusable="false"/>
 
-    <Button
-        android:id="@+id/cancel_button"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/select_due_date_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日付を選択"
+            android:backgroundTint="@color/my_orange"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="キャンセル" />
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/save_todo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TODOを保存"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_blue_light"/>
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="キャンセル"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_red_light"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
